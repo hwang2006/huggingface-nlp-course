@@ -160,7 +160,7 @@ Executing transaction: done
 #     $ conda deactivate
 ```
 
-Now, you need to install python packages for the `hf-nlp-course` virtual environment.  
+Now, you need to install Python packages for the `hf-nlp-course` virtual environment.  
 ```
 [glogin01]$ conda activate hf-nlp-course
 (hf-nlp-course) [glogin01]$ pip install scipy scikit-learn huggingface_hub bitsandbytes accelerate evaluate seqeval transformers datasets
