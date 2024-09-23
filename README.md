@@ -245,8 +245,8 @@ Successfully installed accelerate-0.34.2 bitsandbytes-0.42.0 evaluate-0.4.3 jobl
 <p align="center"><img src="https://github.com/hwang2006/KISTI-DL-tutorial-using-horovod/assets/84169368/34a753fc-ccb7-423e-b0f3-f973b8cd7122"/>
 </p>
 
-In order to do so, you need to add the "hf-nlp-course" virtual envrionment that you have created as a python kernel.
-1. activate the hf-nlp-course virtual environment, if it's not activated:
+In order to do so, you need to add the `hf-nlp-course` virtual envrionment that you have created as a python kernel.
+1. activate the `hf-nlp-course` virtual environment, if it's not activated:
 ```
 [glogin01]$ conda activate hf-nlp-course
 ```
