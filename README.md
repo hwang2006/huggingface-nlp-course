@@ -1,6 +1,6 @@
 # huggingface-nlp-course
 
-This repository contains hands-on exercises designed to run the [Hugging Face NLP Course](https://huggingface.co/learn/nlp-course) on a supercomputer, allowing users to leverage SLURM-managed supercomputer for advanced natural language processing tasks and learning experiences.  
+This repository provides hands-on practices designed to exercise the codes in the [Hugging Face NLP Course](https://huggingface.co/learn/nlp-course), allowing users to leverage a SLURM-managed supercomputer for various natural language processing tasks including Token classification, Translation, Summarization and Question answering.   
 
 **Contents**
 * [KISTI Neuron GPU Cluster](#kisti-neuron-gpu-cluster)
