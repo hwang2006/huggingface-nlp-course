@@ -158,9 +158,12 @@ Executing transaction: done
 # To deactivate an active environment, use
 #
 #     $ conda deactivate
+```
 
+Now, you need to install python packages to run the codes in the hugging face NLP course.  
+```
 [glogin01]$ conda activate hf-nlp-course
-(hf-nlp-course) [glogin01]$ pip pip install scipy scikit-learn huggingface_hub bitsandbytes accelerate evaluate seqeval transformers datasets
+(hf-nlp-course) [glogin01]$ pip install scipy scikit-learn huggingface_hub bitsandbytes accelerate evaluate seqeval transformers datasets
 Looking in indexes: https://pypi.org/simple, https://pypi.ngc.nvidia.com
 Collecting scipy
   Downloading scipy-1.14.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (60 kB)
