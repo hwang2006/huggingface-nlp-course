@@ -163,7 +163,7 @@ Executing transaction: done
 Now, you need to install Python packages for the `hf-nlp-course` virtual environment.  
 ```
 [glogin01]$ conda activate hf-nlp-course
-(hf-nlp-course) [glogin01]$ pip install scipy scikit-learn huggingface_hub bitsandbytes accelerate evaluate seqeval transformers datasets
+(hf-nlp-course) [glogin01]$ pip install transformers datasets scipy scikit-learn huggingface_hub bitsandbytes accelerate evaluate seqeval
 Looking in indexes: https://pypi.org/simple, https://pypi.ngc.nvidia.com
 Collecting scipy
   Downloading scipy-1.14.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (60 kB)
