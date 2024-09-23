@@ -1,0 +1,13 @@
+# INSTALLING PREVIOUS VERSIONS OF PYTORCH 
+# CUDA 12.1 
+conda install pytorch==2.4.0 torchvision==0.19.0 torchaudio==2.4.0 pytorch-cuda=12.1 -c pytorch -c nvidia
+conda install jupyter chardet cchardet
+#pip install jupyter-tensorboard
+
+pip install scipy scikit-learn
+pip install huggingface_hub
+pip install bitsandbytes accelerate
+pip install transformers
+pip install datasets
+pip install evaluate
+pip install seqeval
