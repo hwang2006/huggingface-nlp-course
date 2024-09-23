@@ -158,6 +158,86 @@ Executing transaction: done
 # To deactivate an active environment, use
 #
 #     $ conda deactivate
+
+[glogin01]$ conda activate hf-nlp-course
+(hf-nlp-course) [glogin01]$ pip pip install scipy scikit-learn huggingface_hub bitsandbytes accelerate evaluate seqeval transformers datasets
+Looking in indexes: https://pypi.org/simple, https://pypi.ngc.nvidia.com
+Collecting scipy
+  Downloading scipy-1.14.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (60 kB)
+Collecting scikit-learn
+  Downloading scikit_learn-1.5.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (13 kB)
+Requirement already satisfied: huggingface_hub in /scratch/qualis/miniconda3/envs/hf-nlp-course/lib/python3.10/site-packages (0.25.0)
+Collecting bitsandbytes
+  Downloading bitsandbytes-0.42.0-py3-none-any.whl.metadata (9.9 kB)
+Collecting accelerate
+  Downloading accelerate-0.34.2-py3-none-any.whl.metadata (19 kB)
+Collecting evaluate
+  Downloading evaluate-0.4.3-py3-none-any.whl.metadata (9.2 kB)
+Collecting seqeval
+  Downloading seqeval-1.2.2.tar.gz (43 kB)
+  Preparing metadata (setup.py) ... done
+Requirement already satisfied: transformers in /scratch/qualis/miniconda3/envs/hf-nlp-course/lib/python3.10/site-packages (4.44.2)
+Requirement already satisfied: datasets in /scratch/qualis/miniconda3/envs/hf-nlp-course/lib/python3.10/site-packages (3.0.0)
+Requirement already satisfied: numpy<2.3,>=1.23.5 in /scratch/qualis/miniconda3/envs/hf-nlp-course/lib/python3.10/site-packages (from scipy) (2.0.1)
+Collecting joblib>=1.2.0 (from scikit-learn)
+  Downloading joblib-1.4.2-py3-none-any.whl.metadata (5.4 kB)
+Collecting threadpoolctl>=3.1.0 (from scikit-learn)
+  Downloading threadpoolctl-3.5.0-py3-none-any.whl.metadata (13 kB)
+Requirement already satisfied: filelock in /scratch/qualis/miniconda3/envs/hf-nlp-course/lib/python3.10/site-packages (from huggingface_hub) (3.13.1)
+Requirement already satisfied: fsspec>=2023.5.0 in /scratch/qualis/miniconda3/envs/hf-nlp-course/lib/python3.10/site-packages (from huggingface_hub) (2024.6.1)
+Requirement already satisfied: packaging>=20.9 in /scratch/qualis/miniconda3/envs/hf-nlp-course/lib/python3.10/site-packages (from huggingface_hub) (24.1)
+Requirement already satisfied: pyyaml>=5.1 in /scratch/qualis/miniconda3/envs/hf-nlp-course/lib/python3.10/site-packages (from huggingface_hub) (6.0.1)
+Requirement already satisfied: requests in /scratch/qualis/miniconda3/envs/hf-nlp-course/lib/python3.10/site-packages (from huggingface_hub) (2.32.3)
+Requirement already satisfied: tqdm>=4.42.1 in /scratch/qualis/miniconda3/envs/hf-nlp-course/lib/python3.10/site-packages (from huggingface_hub) (4.66.5)
+Requirement already satisfied: typing-extensions>=3.7.4.3 in /scratch/qualis/miniconda3/envs/hf-nlp-course/lib/python3.10/site-packages (from huggingface_hub) (4.11.0)
+Requirement already satisfied: psutil in /scratch/qualis/miniconda3/envs/hf-nlp-course/lib/python3.10/site-packages (from accelerate) (5.9.0)
+Requirement already satisfied: torch>=1.10.0 in /scratch/qualis/miniconda3/envs/hf-nlp-course/lib/python3.10/site-packages (from accelerate) (2.4.0)
+Requirement already satisfied: safetensors>=0.4.3 in /scratch/qualis/miniconda3/envs/hf-nlp-course/lib/python3.10/site-packages (from accelerate) (0.4.5)
+Requirement already satisfied: dill in /scratch/qualis/miniconda3/envs/hf-nlp-course/lib/python3.10/site-packages (from evaluate) (0.3.8)
+Requirement already satisfied: pandas in /scratch/qualis/miniconda3/envs/hf-nlp-course/lib/python3.10/site-packages (from evaluate) (2.2.3)
+Requirement already satisfied: xxhash in /scratch/qualis/miniconda3/envs/hf-nlp-course/lib/python3.10/site-packages (from evaluate) (3.5.0)
+Requirement already satisfied: multiprocess in /scratch/qualis/miniconda3/envs/hf-nlp-course/lib/python3.10/site-packages (from evaluate) (0.70.16)
+Requirement already satisfied: regex!=2019.12.17 in /scratch/qualis/miniconda3/envs/hf-nlp-course/lib/python3.10/site-packages (from transformers) (2024.9.11)
+Requirement already satisfied: tokenizers<0.20,>=0.19 in /scratch/qualis/miniconda3/envs/hf-nlp-course/lib/python3.10/site-packages (from transformers) (0.19.1)
+Requirement already satisfied: pyarrow>=15.0.0 in /scratch/qualis/miniconda3/envs/hf-nlp-course/lib/python3.10/site-packages (from datasets) (17.0.0)
+Requirement already satisfied: aiohttp in /scratch/qualis/miniconda3/envs/hf-nlp-course/lib/python3.10/site-packages (from datasets) (3.10.5)
+Requirement already satisfied: aiohappyeyeballs>=2.3.0 in /scratch/qualis/miniconda3/envs/hf-nlp-course/lib/python3.10/site-packages (from aiohttp->datasets) (2.4.0)
+Requirement already satisfied: aiosignal>=1.1.2 in /scratch/qualis/miniconda3/envs/hf-nlp-course/lib/python3.10/site-packages (from aiohttp->datasets) (1.3.1)
+Requirement already satisfied: attrs>=17.3.0 in /scratch/qualis/miniconda3/envs/hf-nlp-course/lib/python3.10/site-packages (from aiohttp->datasets) (23.1.0)
+Requirement already satisfied: frozenlist>=1.1.1 in /scratch/qualis/miniconda3/envs/hf-nlp-course/lib/python3.10/site-packages (from aiohttp->datasets) (1.4.1)
+Requirement already satisfied: multidict<7.0,>=4.5 in /scratch/qualis/miniconda3/envs/hf-nlp-course/lib/python3.10/site-packages (from aiohttp->datasets) (6.1.0)
+Requirement already satisfied: yarl<2.0,>=1.0 in /scratch/qualis/miniconda3/envs/hf-nlp-course/lib/python3.10/site-packages (from aiohttp->datasets) (1.11.1)
+Requirement already satisfied: async-timeout<5.0,>=4.0 in /scratch/qualis/miniconda3/envs/hf-nlp-course/lib/python3.10/site-packages (from aiohttp->datasets) (4.0.3)
+Requirement already satisfied: charset-normalizer<4,>=2 in /scratch/qualis/miniconda3/envs/hf-nlp-course/lib/python3.10/site-packages (from requests->huggingface_hub) (3.3.2)
+Requirement already satisfied: idna<4,>=2.5 in /scratch/qualis/miniconda3/envs/hf-nlp-course/lib/python3.10/site-packages (from requests->huggingface_hub) (3.7)
+Requirement already satisfied: urllib3<3,>=1.21.1 in /scratch/qualis/miniconda3/envs/hf-nlp-course/lib/python3.10/site-packages (from requests->huggingface_hub) (2.2.2)
+Requirement already satisfied: certifi>=2017.4.17 in /scratch/qualis/miniconda3/envs/hf-nlp-course/lib/python3.10/site-packages (from requests->huggingface_hub) (2024.8.30)
+Requirement already satisfied: sympy in /scratch/qualis/miniconda3/envs/hf-nlp-course/lib/python3.10/site-packages (from torch>=1.10.0->accelerate) (1.13.2)
+Requirement already satisfied: networkx in /scratch/qualis/miniconda3/envs/hf-nlp-course/lib/python3.10/site-packages (from torch>=1.10.0->accelerate) (3.2.1)
+Requirement already satisfied: jinja2 in /scratch/qualis/miniconda3/envs/hf-nlp-course/lib/python3.10/site-packages (from torch>=1.10.0->accelerate) (3.1.4)
+Requirement already satisfied: python-dateutil>=2.8.2 in /scratch/qualis/miniconda3/envs/hf-nlp-course/lib/python3.10/site-packages (from pandas->evaluate) (2.9.0.post0)
+Requirement already satisfied: pytz>=2020.1 in /scratch/qualis/miniconda3/envs/hf-nlp-course/lib/python3.10/site-packages (from pandas->evaluate) (2024.1)
+Requirement already satisfied: tzdata>=2022.7 in /scratch/qualis/miniconda3/envs/hf-nlp-course/lib/python3.10/site-packages (from pandas->evaluate) (2024.1)
+Requirement already satisfied: six>=1.5 in /scratch/qualis/miniconda3/envs/hf-nlp-course/lib/python3.10/site-packages (from python-dateutil>=2.8.2->pandas->evaluate) (1.16.0)
+Requirement already satisfied: MarkupSafe>=2.0 in /scratch/qualis/miniconda3/envs/hf-nlp-course/lib/python3.10/site-packages (from jinja2->torch>=1.10.0->accelerate) (2.1.3)
+Requirement already satisfied: mpmath<1.4,>=1.1.0 in /scratch/qualis/miniconda3/envs/hf-nlp-course/lib/python3.10/site-packages (from sympy->torch>=1.10.0->accelerate) (1.3.0)
+Downloading scipy-1.14.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (41.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 41.2/41.2 MB 289.6 MB/s eta 0:00:00
+Downloading scikit_learn-1.5.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (13.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 13.3/13.3 MB 349.5 MB/s eta 0:00:00
+Downloading bitsandbytes-0.42.0-py3-none-any.whl (105.0 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 105.0/105.0 MB 50.3 MB/s eta 0:00:00
+Downloading accelerate-0.34.2-py3-none-any.whl (324 kB)
+Downloading evaluate-0.4.3-py3-none-any.whl (84 kB)
+Downloading joblib-1.4.2-py3-none-any.whl (301 kB)
+Downloading threadpoolctl-3.5.0-py3-none-any.whl (18 kB)
+Building wheels for collected packages: seqeval
+  Building wheel for seqeval (setup.py) ... done
+  Created wheel for seqeval: filename=seqeval-1.2.2-py3-none-any.whl size=16161 sha256=20ef7d1cc2849b2fd6e6f914ef34dd6df2221b2b01a14b7e2857a5160b45e0dd
+  Stored in directory: /tmp/pip-ephem-wheel-cache-8khnxgsg/wheels/1a/67/4a/ad4082dd7dfc30f2abfe4d80a2ed5926a506eb8a972b4767fa
+Successfully built seqeval
+Installing collected packages: threadpoolctl, scipy, joblib, scikit-learn, bitsandbytes, seqeval, accelerate, evaluate
+Successfully installed accelerate-0.34.2 bitsandbytes-0.42.0 evaluate-0.4.3 joblib-1.4.2 scikit-learn-1.5.2 scipy-1.14.1 seqeval-1.2.2 threadpoolctl-3.5.0
 ```
 
 ## Running Jupyter
@@ -166,22 +246,22 @@ Executing transaction: done
 </p>
 
 In order to do so, you need to add the "hf-nlp-course" virtual envrionment that you have created as a python kernel.
-1. activate the horovod-enabled virtual environment:
+1. activate the hf-nlp-course virtual environment, if it's not activated:
 ```
 [glogin01]$ conda activate hf-nlp-course
 ```
 2. install Jupyter on the virtual environment:
 ```
-(genai) [glogin01]$ conda install jupyter chardet cchardet 
+(hf-nlp-course) [glogin01]$ conda install jupyter chardet cchardet 
   
 ```
 3. add the virtual environment as a jupyter kernel:
 ```
-(genai) [glogin01]$ python -m ipykernel install --user --name hf-nlp-course 
+(hf-nlp-course) [glogin01]$ python -m ipykernel install --user --name hf-nlp-course 
 ```
 4. check the list of kernels currently installed:
 ```
-(genai) [glogin01]$ jupyter kernelspec list
+(hf-nlp-course) [glogin01]$ jupyter kernelspec list
 Available kernels:
 python3               /home01/$USER/.local/share/jupyter/kernels/python3
 hf-nlp-course         /home01/$USER/.local/share/jupyter/kernels/hf-nlp-course
@@ -189,16 +269,16 @@ hf-nlp-course         /home01/$USER/.local/share/jupyter/kernels/hf-nlp-course
 5. launch a jupyter notebook server on a worker node 
 - to deactivate the virtual environment
 ```
-(genai) [glogin01]$ conda deactivate
+(hf-nlp-course) [glogin01]$ conda deactivate
 ```
 - to create a batch script for launching a jupyter notebook server: 
 ```
 [glogin01]$ cat jupyter_run.sh
 #!/bin/bash
-#SBATCH --comment=pytorch
+#SBATCH --comment=tensorflow
 ##SBATCH --partition=mig_amd_a100_4
-#SBATCH --partition=amd_a100nv_8
-##SBATCH --partition=cas_v100nv_8
+##SBATCH --partition=amd_a100nv_8
+#SBATCH --partition=cas_v100nv_8
 ##SBATCH --partition=cas_v100_4
 #SBATCH --time=12:00:00        # walltime
 #SBATCH --nodes=1             # the number of nodes
@@ -225,14 +305,16 @@ echo "ssh -L localhost:8888:${SERVER}:${PORT_JU} ${USER}@neuron.ksc.re.kr"
 #echo "ssh -L localhost:${PORT_JU}:${SERVER}:${PORT_JU} ${USER}@neuron.ksc.re.kr"
 
 echo "load module-environment"
+#module load gcc/10.2.0 cuda/11.6
 module load gcc/10.2.0 cuda/12.1
 
 echo "execute jupyter"
 source ~/.bashrc
 conda activate hf-nlp-course
 cd /scratch/$USER  # the root/work directory of Jupyter lab/notebook
-jupyter lab --ip=0.0.0.0 --port=${PORT_JU} --NotebookApp.token=${USER} #jupyter token: your account ID
+jupyter lab --ip=0.0.0.0 --port=${PORT_JU} --no-browser --NotebookApp.token=${USER} #jupyter token: your account ID
 echo "end of the job"
+
 ```
 - to launch a jupyter notebook server 
 ```
