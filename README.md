@@ -128,14 +128,14 @@ conda 23.9.0
 ## Creating a Conda Virtual Environment
 You want to create a virtual envrionment with a python version 3.10 for Generative AI Practices.
 ```
-[glogin01]$ conda create -n genai python=3.10
+[glogin01]$ conda create -n hf-nlp-course python=3.10
 Retrieving notices: ...working... done
 Collecting package metadata (current_repodata.json): done
 Solving environment: done
 
 ## Package Plan ##
 
-  environment location: /scratch/qualis/miniconda3/envs/genai
+  environment location: /scratch/qualis/miniconda3/envs/hf-nlp-course
 
   added / updated specs:
     - python=3.10
@@ -153,7 +153,7 @@ Executing transaction: done
 #
 # To activate this environment, use
 #
-#     $ conda activate genai
+#     $ conda activate hf-nlp-course
 #
 # To deactivate an active environment, use
 #
@@ -165,10 +165,10 @@ Executing transaction: done
 <p align="center"><img src="https://github.com/hwang2006/KISTI-DL-tutorial-using-horovod/assets/84169368/34a753fc-ccb7-423e-b0f3-f973b8cd7122"/>
 </p>
 
-In order to do so, you need to add the "genai" virtual envrionment that you have created as a python kernel.
+In order to do so, you need to add the "hf-nlp-course" virtual envrionment that you have created as a python kernel.
 1. activate the horovod-enabled virtual environment:
 ```
-[glogin01]$ conda activate genai
+[glogin01]$ conda activate hf-nlp-course
 ```
 2. install Jupyter on the virtual environment:
 ```
@@ -177,14 +177,14 @@ In order to do so, you need to add the "genai" virtual envrionment that you have
 ```
 3. add the virtual environment as a jupyter kernel:
 ```
-(genai) [glogin01]$ pip install ipykernel; python -m ipykernel install --user --name genai
+(genai) [glogin01]$ python -m ipykernel install --user --name hf-nlp-course 
 ```
 4. check the list of kernels currently installed:
 ```
 (genai) [glogin01]$ jupyter kernelspec list
 Available kernels:
-python3       /home01/$USER/.local/share/jupyter/kernels/python3
-genai         /home01/$USER/.local/share/jupyter/kernels/genai
+python3               /home01/$USER/.local/share/jupyter/kernels/python3
+hf-nlp-course         /home01/$USER/.local/share/jupyter/kernels/hf-nlp-course
 ```
 5. launch a jupyter notebook server on a worker node 
 - to deactivate the virtual environment
@@ -225,11 +225,11 @@ echo "ssh -L localhost:8888:${SERVER}:${PORT_JU} ${USER}@neuron.ksc.re.kr"
 #echo "ssh -L localhost:${PORT_JU}:${SERVER}:${PORT_JU} ${USER}@neuron.ksc.re.kr"
 
 echo "load module-environment"
-module load gcc/10.2.0 cuda/12.3
+module load gcc/10.2.0 cuda/12.1
 
 echo "execute jupyter"
 source ~/.bashrc
-conda activate genai
+conda activate hf-nlp-course
 cd /scratch/$USER  # the root/work directory of Jupyter lab/notebook
 jupyter lab --ip=0.0.0.0 --port=${PORT_JU} --NotebookApp.token=${USER} #jupyter token: your account ID
 echo "end of the job"
