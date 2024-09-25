@@ -276,7 +276,11 @@ hf-nlp-course         /home01/$USER/.local/share/jupyter/kernels/hf-nlp-course
 ```
 - to create a batch script for launching a jupyter notebook server: 
 ```
-[glogin01]$ cat jupyter_run.sh
+[glogin01]$ git clone https://github.com/hwang2006/huggingface-nlp-course.git
+[glogin01]$ cd huggingface-nlp-course
+[glogin01]$ ls
+./  ../  bin/  data/  .git/  README.md  src/
+[glogin01]$ cat bin/jupyter_run.sh
 #!/bin/bash
 #SBATCH --comment=tensorflow
 ##SBATCH --partition=mig_amd_a100_4
